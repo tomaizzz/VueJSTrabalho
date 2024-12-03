@@ -1,123 +1,209 @@
-/* Estilo geral */
+/* Estilo Geral */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #fff, #e8f6f3);
+    background: linear-gradient(180deg, #ffffff, #f5f5f5);
     color: #444;
 }
 
+/* Header */
 header {
-    background-color: #2ecc71;
-    padding: 20px;
-    text-align: center;
+    background: linear-gradient(90deg, #28a745, #d32f2f);
     color: white;
+    padding: 20px 10px;
+    text-align: center;
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
+/* Menu */
 nav {
-    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 nav button {
-    margin: 0 10px;
-    padding: 10px 15px;
-    border: none;
-    background-color: #fff;
-    color: #2ecc71;
+    margin: 0 15px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #28a745;
+    border: 2px solid #28a745;
+    background: none;
     border-radius: 20px;
     cursor: pointer;
-    font-size: 14px;
     transition: all 0.3s ease;
 }
 
 nav button:hover {
-    background-color: #27ae60;
-    color: white;
+    background: #28a745;
+    color: #ffffff;
 }
 
+/* Seções */
 main {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Sabores */
-.grid-sabores {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.card-sabor {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+/* Página Sobre */
+.sobre h2 {
+    color: #d32f2f;
     text-align: center;
+    margin-bottom: 20px;
 }
 
-.img-sabor {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
+.sobre p {
+    line-height: 1.8;
+    text-align: justify;
 }
 
-.card-sabor h3 {
-    margin: 15px 0 10px;
-    font-size: 1.2rem;
-    color: #2ecc71;
-}
-
-.btn-comprar {
-    padding: 10px 15px;
-    background-color: #2ecc71;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btn-comprar:hover {
-    background-color: #27ae60;
-}
-
-/* Fundadores */
 .fundadores {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
     margin-top: 20px;
 }
 
+.fundador {
+    text-align: center;
+    margin: 15px;
+}
+
 .fundador img {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .fundador p {
-    text-align: center;
     margin-top: 10px;
     font-weight: bold;
+    font-size: 14px;
+}
+
+/* Página Sabores */
+.grid-sabores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card-sabor {
+    border-radius: 15px;
+    background: linear-gradient(145deg, #d32f2f, #ffffff);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.card-sabor:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.card-sabor img {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.card-sabor h3 {
+    margin: 15px 0 10px;
+    font-size: 1.3rem;
+    color: #ffffff;
+}
+
+.btn-comprar {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-comprar:hover {
+    background: #1e7a36;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
     nav button {
-        margin: 5px 0;
+        margin: 5px 10px;
     }
 
     .grid-sabores {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }
+
+.pagina.home {
+    background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+}
+
+.pagina.home h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.pagina.home p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.pagina.home img {
+    max-width: 400px;
+    border: 5px solid #d32f2f;
+}
+.sobre h2 {
+    font-size: 2.5rem;
+    color: #28a745;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.sobre p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: justify;
+    color: #6c757d;
+}
+
+.sobre .fundador p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #d32f2f;
+}
+.card-sabor h3 {
+    color: #000000; 
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card-sabor p {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
