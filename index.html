@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enanitos Verdes Helado</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Menu de Navegação -->
+        <header>
+            <h1>Enanitos Verdes Helado</h1>
+            <nav>
+                <button @click="exibirPagina('home')">Home</button>
+                <button @click="exibirPagina('sobre')">Sobre</button>
+                <button @click="exibirPagina('sabores')">Sabores</button>
+                <button @click="exibirPagina('contato')">Contato</button>
+            </nav>
+            
+        </header>
+
+        <!-- Conteúdo Dinâmico -->
+        <main>
+            <component :is="paginaAtual"></component>
+        </main>
+
+        <!-- Rodapé -->
+        <footer>
+            <p>© 2024 Enanitos Verdes Helado - Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
