@@ -6,7 +6,7 @@ Vue.component('home-page', {
     <p class="lead text-secondary">
         Experimente o místico sabor dos Andes e da Amazônia. Um sorvete que conecta a história, a natureza e os sentidos.
     </p>
-    <img src="./imagens/pote-sorvete.jpg" alt="Pote de Sorvete" class="img-fluid mx-auto d-block rounded shadow-lg">
+    <img src="./imagens/pote-de-sorvete.jpeg" alt="Pote de Sorvete" class="img-fluid mx-auto d-block rounded shadow-lg">
 </div>
 
     `
@@ -23,9 +23,9 @@ Durante uma visita a uma antiga feira de Lima, eles encontraram uma receita secr
 
 Em uma noite de lua cheia, em 2024, Gabriel teve uma visão durante uma peregrinação ao Machu Picchu. Ele viu a sombra de um pequeno Inca, vestido de verde, que lhe entregou uma tigela de sorvete que evocava o poder dos Andes e da selva amazônica. O sabor era indescritível, uma mistura de frutas exóticas e ervas nativas, combinados com o frescor de um gelo que parecia ter sido feito pelas nuvens da montanha.
 
-Despertos pela visão, Gabriel e seus amigos começaram a explorar as lendas locais sobre os "sabores sagrados". Foi então que descobriram ingredientes secretos: o *maca* (uma raiz energética), o *camu-camu* (uma fruta com poderes revitalizantes), o *sachatomé* (uma planta de aroma adocicado) e o *coca* (da folha sagrada do Peru, que proporciona um toque único de frescor). Com esses ingredientes, começaram a criar suas primeiras receitas de sorvetes, que rapidamente se tornaram uma obsessão.
+Despertos pela visão, Gabriel e seus amigos começaram a explorar as lendas locais sobre os "sabores sagrados". Foi então que descobriram ingredientes secretos: o maca (uma raiz energética), o camu-camu (uma fruta com poderes revitalizantes), o sachatomé (uma planta de aroma adocicado) e o coca (da folha sagrada do Peru, que proporciona um toque único de frescor). Com esses ingredientes, começaram a criar suas primeiras receitas de sorvetes, que rapidamente se tornaram uma obsessão.
 
-Lucas, com sua paixão por história, conectou as raízes brasileiras à mística peruana, trazendo o *cabeludinha* (uma fruta amazônica com um sabor exótico) e o *bacuri* (do norte do Brasil), que se harmonizavam perfeitamente com a combinação única dos sabores peruanos. Denis e André, ambos com experiências em gastronomia e biotecnologia, aperfeiçoaram as técnicas de fabricação, criando sorvetes incrivelmente cremosos e ao mesmo tempo refrescantes, utilizando processos que respeitavam os ensinamentos dos antigos mestres incas.
+Lucas, com sua paixão por história, conectou as raízes brasileiras à mística peruana, trazendo o cabeludinha (uma fruta amazônica com um sabor exótico) e o bacuri (do norte do Brasil), que se harmonizavam perfeitamente com a combinação única dos sabores peruanos. Denis e André, ambos com experiências em gastronomia e biotecnologia, aperfeiçoaram as técnicas de fabricação, criando sorvetes incrivelmente cremosos e ao mesmo tempo refrescantes, utilizando processos que respeitavam os ensinamentos dos antigos mestres incas.
 
 A Enanitos Verdes Helado não é apenas uma sorveteria, mas uma jornada mística que une o melhor do Peru e do Brasil. Seus sorvetes são feitos para não apenas satisfazer o paladar, mas também para despertar os sentidos e transportar quem os saboreia para um mundo onde as montanhas andinas e as florestas amazônicas dançam em harmonia. A lenda diz que, ao degustar um sorvete, a pessoa sente uma conexão com a natureza e com os ancestrais que habitaram essas terras.
 
@@ -39,23 +39,25 @@ Venha viver essa experiência.
                 
             </p>
             <div class="fundadores">
-                <div v-for="fundador in fundadores" class="fundador">
-                    <img :src="fundador.imagem" :alt="fundador.nome">
-                    <p>{{ fundador.nome }}</p>
-                </div>
-            </div>
+  <div v-for="fundador in fundadores" class="fundador" :key="fundador.nome">
+    <img :src="fundador.imagem" :alt="fundador.nome" />
+    <p>{{ fundador.nome }}</p>
+  </div>
+</div>
+
         </div>
     `,
     data() {
         return {
-            fundadores: [
-                { nome: 'Gabriel', imagem: './imagens/fundador1.jpg' },
-                { nome: 'Denis', imagem: './imagens/fundador2.jpg' },
-                { nome: 'André', imagem: './imagens/fundador3.jpg' },
-                { nome: 'Lucas', imagem: './imagens/fundador4.jpg' }
-            ]
+          fundadores: [
+            { nome: 'Gabriel', imagem: './imagens/tamaiz.png' },
+            { nome: 'Denis', imagem: './imagens/tênis.png' },
+            { nome: 'André', imagem: './imagens/andré.png' },
+            { nome: 'Lucas', imagem: './imagens/lucas.png' }
+          ]
         };
-    }
+      }
+      
 });
 
 
@@ -105,18 +107,18 @@ Vue.component('sabores-page', {
     data() {
         return {
             sabores: [
-                { nome: 'Cachada', imagem: './imagens/sabores/sabor1.jpg' },
-                { nome: 'Dina Paúcar', imagem: './imagens/sabores/sabor2.jpg' },
-                { nome: 'Jugo de Rana', imagem: './imagens/sabores/sabor3.jpg' },
-                { nome: 'Carne de Cavalo', imagem: './imagens/sabores/sabor4.jpg' },
-                { nome: 'Fluminense', imagem: './imagens/sabores/sabor5.jpg' },
-                { nome: 'Fallen Verdadeiro', imagem: './imagens/sabores/sabor6.jpg' },
+                { nome: 'Cachada', imagem: './imagens/cachada.jpg' },
+                { nome: 'Dina Paúcar', imagem: './imagens/dina paucar.jpg' },
+                { nome: 'Jugo de Rana', imagem: './imagens/rã.png' },
+                { nome: 'Carne de Cavalo', imagem: './imagens/cavalo.png' },
+                { nome: 'Fluminense', imagem: './imagens/flumense.png' },
+                { nome: 'Fallen Verdadeiro', imagem: './imagens/fallen.jpg' },
                 { nome: 'Balalaika Beans', imagem: './imagens/sabores/sabor7.jpg' },
-                { nome: 'Don Omar', imagem: './imagens/sabores/sabor8.jpg' },
-                { nome: 'Paolo Guerrero', imagem: './imagens/sabores/sabor9.jpg' },
-                { nome: 'Eduardo Web', imagem: './imagens/sabores/sabor10.jpg' },
-                { nome: 'Ceviche', imagem: './imagens/sabores/sabor11.jpg' },
-                { nome: 'Lomo Saltado', imagem: './imagens/sabores/sabor12.jpg' }
+                { nome: 'Don Omar', imagem: './imagens/don omar.jpg' },
+                { nome: 'Paolo Guerrero', imagem: './imagens/guerrero.jpg' },
+                { nome: 'Eduardo Web', imagem: './imagens/eduardo web.jpg' },
+                { nome: 'Ceviche', imagem: './imagens/ceviche.png' },
+                { nome: 'Lomo Saltado', imagem: './imagens/lomo.jpg' }
             ]
         };
     }
